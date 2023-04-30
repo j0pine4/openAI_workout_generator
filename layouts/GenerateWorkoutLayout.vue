@@ -4,7 +4,7 @@
 
     <div class="container mx-auto">
   
-      <pre> {{ state.queryParams }} </pre>
+      <!-- <pre> {{ state.queryParams }} </pre> -->
 
       <tab-bar>
         <slot></slot>
