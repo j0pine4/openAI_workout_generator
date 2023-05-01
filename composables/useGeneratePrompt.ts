@@ -1,5 +1,5 @@
 import { Configuration, OpenAIApi } from 'openai'
-import { InjuryOptions, MuscleGroups } from "~/models/QueryParams"
+import { EquipmentOptions, InjuryOptions, MuscleGroups } from "~/models/QueryParams"
 import { useStore } from "~/stores/useStore"
 const runtimeConfig = useRuntimeConfig();
 
@@ -49,7 +49,18 @@ export const GeneratePrompt = () => {
                 prompt += `${injury.name}, `
             })
 
-            prompt += '. So my workout needs to ommit exercises that cause potential stress to these areas.'
+            prompt += ' so my workout needs to ommit exercises that cause potential stress to these areas.'
+        }
+
+        // Check for equipment
+        if (state.queryParams.equipmentOptions?.length){
+            prompt += `The only equipment I have available to me is `
+
+            state.queryParams.equipmentOptions.forEach( (equipment: EquipmentOptions) => {
+                prompt += `${equipment.name}, `
+            })
+
+            prompt += ' so my workout needs to ommit any exercises that use equipment other than this.'
         }
 
         // Ask for calorie breakdown at the end

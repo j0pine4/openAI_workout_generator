@@ -10,11 +10,6 @@
         <p class="text-gray-500 font-light mb-10"> If nothing is selected, this option will be ommitted from the workout. </p>
         <injury-option-cards></injury-option-cards>
     </div>
-
-    <div>
-        <h1 class="text-3xl font-semibold mb-4 leading-10"> Equipment </h1>
-        <p class="text-gray-500 font-light mb-10"> If nothing is selected, your workout could consist of any type of workout equipment. </p>
-    </div>
         
 </template>
 

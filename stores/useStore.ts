@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { CurrentTab } from '../models/CurrentTab'
-import { FitnessLevel, InjuryOptions, MuscleGroups, QueryParams } from '~/models/QueryParams'
+import { InjuryOptions, EquipmentOptions, MuscleGroups, QueryParams } from '~/models/QueryParams'
 
 export const useStore = defineStore('store', () => {
     const currentTab = ref<CurrentTab>(CurrentTab.FITNESS_LEVEL)
@@ -14,7 +14,8 @@ export const useStore = defineStore('store', () => {
       goal: null,
       muscleGroupOptions: [],
       timeOptions: null,
-      injuryOptions: []
+      injuryOptions: [],
+      equipmentOptions: [],
     })
 
     const injuryOptions = ref<InjuryOptions[]>([
@@ -131,5 +132,50 @@ export const useStore = defineStore('store', () => {
     },
   ])
 
-    return { currentTab, injuryOptions, muscleGroupOptions, queryParams, isLoading, generatedWorkout }
+  const equipmentOptions = ref<EquipmentOptions[]>([
+    { 
+        id: 1, 
+        name: 'Bodyweight',
+        image_url: 'https://images.unsplash.com/photo-1605296867424-35fc25c9212a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        active: false
+    },
+    { 
+        id: 2, 
+        name: 'Dumbbells',
+        image_url: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        active: false
+    },
+    { 
+        id: 3, 
+        name: 'Free Weights',
+        image_url: 'https://images.unsplash.com/photo-1652363722833-509b3aac287b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        active: false
+    },
+    { 
+        id: 4, 
+        name: 'Kettle Bells',
+        image_url: 'https://images.unsplash.com/photo-1570440828762-ab7a993dbde8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80',
+        active: false
+    },
+    { 
+        id: 5, 
+        name: 'Pullup Bar',
+        image_url: 'https://images.unsplash.com/photo-1663614536871-3845f6890aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+        active: false
+    },
+    { 
+        id: 6, 
+        name: 'Dip Station',
+        image_url: 'https://images.unsplash.com/photo-1616804167821-55eb1fab5b5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        active: false
+    },
+    { 
+        id: 7, 
+        name: 'Battle Ropes',
+        image_url: 'https://images.unsplash.com/photo-1514994444123-10094655bdb5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+        active: false
+    },
+    ])
+
+    return { currentTab, injuryOptions, equipmentOptions, muscleGroupOptions, queryParams, isLoading, generatedWorkout }
   })

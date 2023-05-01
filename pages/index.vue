@@ -19,7 +19,7 @@
     </div>
 
     <div v-if="state.currentTab == CurrentTab.EQUIPMENT"> 
-        <h1 class="text-3xl font-semibold mb-6 leading-10"> Select any <span class="text-accent font-bold bg-base-content py-1 px-3 lg:py-2 lg:px-4 rounded-full">limitations</span> you have for this workout... </h1>
+        <h1 class="text-3xl font-semibold mb-6 leading-10"> Select all <span class="text-accent font-bold bg-base-content py-1 px-3 lg:py-2 lg:px-4 rounded-full">equipment</span> you have available for this workout... </h1>
         <equipment-tab></equipment-tab>
     </div>
 

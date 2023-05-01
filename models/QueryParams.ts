@@ -23,6 +23,13 @@ export interface InjuryOptions {
     active: boolean
 }
 
+export interface EquipmentOptions {
+    id: number,
+    name: string,
+    image_url: string,
+    active: boolean
+}
+
 export interface MuscleGroups {
     id: number,
     name: string,
@@ -44,5 +51,6 @@ export interface QueryParams {
     selectedGoal: GoalOptions | null,
     goal: WorkoutGoal | null,
     timeOptions: TimeOptions | null,
-    injuryOptions: InjuryOptions[]
+    injuryOptions: InjuryOptions[],
+    equipmentOptions: EquipmentOptions[],
 }
