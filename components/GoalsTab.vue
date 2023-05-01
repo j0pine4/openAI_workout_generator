@@ -168,20 +168,5 @@
 </script>
 
 <style>
-    .card{
-        @apply
-        hover:bg-base-content
-        hover:text-accent
-        hover:scale-105
-        leading-8  
-        transition-all 
-        duration-500 
-        cursor-pointer
-        rounded-xl
-    }
-    .active{
-        @apply
-        bg-base-content 
-        text-accent
-    }
+    
 </style>

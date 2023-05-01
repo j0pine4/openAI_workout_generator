@@ -9,7 +9,7 @@
         <div  v-if="state.generatedWorkout && !state.isLoading">
             <button class="btn btn-accent mb-6" 
             v-if="state.generatedWorkout"
-            @click="state.generatedWorkout = ''; router.push('/')"> Back </button>
+            @click="state.generatedWorkout = ''; state.currentTab = CurrentTab.FITNESS_LEVEL; router.push('/')"> Back </button>
 
             <!-- <p> {{ state.generatedWorkout }} </p> -->
             <div class="workout" v-html="state.generatedWorkout"></div>
@@ -28,21 +28,20 @@
 
 import { useStore } from '../stores/useStore'
 import { GeneratePrompt } from '../composables/useGeneratePrompt'
+import { CurrentTab } from '~/models/CurrentTab'
 
 const state = useStore()
 const router = useRouter()
 const { generateWorkout } = GeneratePrompt()
 
-onMounted( () => {
+try {
+    await generateWorkout()
+} catch(err) {
+    console.log(err)
+    router.push('/')
+}
 
-    if(state) {
-        generateWorkout()
-    } else {
-        router.push('/')
-    }
     
-})
-
 </script>
 
 <style>
