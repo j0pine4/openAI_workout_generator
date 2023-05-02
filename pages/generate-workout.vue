@@ -34,14 +34,13 @@ const state = useStore()
 const router = useRouter()
 const { generateWorkout } = GeneratePrompt()
 
-try {
-    await generateWorkout()
-} catch(err) {
-    console.log(err)
-    router.push('/')
-}
+const colorMode = useColorMode()
+colorMode.preference = 'acid'
 
-    
+onMounted( async () => {
+    await generateWorkout()
+})
+
 </script>
 
 <style>

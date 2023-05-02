@@ -1,15 +1,15 @@
 import { Configuration, OpenAIApi } from 'openai'
 import { EquipmentOptions, InjuryOptions, MuscleGroups } from "~/models/QueryParams"
 import { useStore } from "~/stores/useStore"
-const runtimeConfig = useRuntimeConfig();
 
-const state = useStore()
-
-const openai = new OpenAIApi( new Configuration({
-    apiKey: runtimeConfig.public.openApiKey
-}))
 
 export const GeneratePrompt = () => {
+
+    const runtimeConfig = useRuntimeConfig();
+    const state = useStore()
+    const openai = new OpenAIApi( new Configuration({
+        apiKey: runtimeConfig.public.openApiKey
+    }))
 
     const buildQuery = () => {
 

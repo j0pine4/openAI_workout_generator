@@ -7,6 +7,7 @@
             as="template"
             :key="category"
             v-slot="{ selected }"
+            @click="scrollToTop"
           >
             <button
               :class="[
@@ -39,6 +40,13 @@
   import { CurrentTab } from '../models/CurrentTab'
 
   const state = useStore()
+
+  const scrollToTop = () => {
+    if (process.client) {
+      window.scrollTo(0,0)
+    }
+  }
+  
   
   </script>
   
