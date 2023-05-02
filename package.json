@@ -24,6 +24,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.13",
     "@pinia/nuxt": "^0.4.9",
+    "@vercel/analytics": "^1.0.0",
     "openai": "^3.2.1",
     "pinia": "^2.0.35"
   }

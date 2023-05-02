@@ -6,6 +6,7 @@ export default defineNuxtConfig({
       classSuffix: '',
     },
     css: ['@/assets/css/main.css',],
+    plugins :[{ src: '~/plugins/vercel.ts', mode: 'client' }],
     runtimeConfig: {
       public: {
         openApiKey: process.env.OPEN_API_KEY
