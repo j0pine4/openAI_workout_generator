@@ -25,14 +25,7 @@
     const state = useStore()
 
     // Functions
-    // const toggleGoal = () => {
 
-    //     if(state.queryParams.goal == goal){
-    //         state.queryParams.goal = null
-    //     } else {
-    //         state.queryParams.goal = goal
-    //     }
-    // }
 
 
 </script>

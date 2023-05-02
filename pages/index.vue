@@ -23,9 +23,22 @@
         <equipment-tab></equipment-tab>
     </div>
 
-    <div class="w-full flex justify-center items-center">
-        <button class="btn btn-accent my-10 max-w-sm w-full" @click="router.push('/generate-workout')"> Generate </button>
+    <div class="max-w-sm mx-auto">
+
+        <button class="btn btn-accent w-full mt-10 mb-4" @click="router.push('/generate-workout')"> Generate </button>
+
+        <div class="flex justify-center items-center gap-4 mb-10 w-full px-2">
+
+            <!-- Previous Button -->
+            <button class="btn btn-disabled w-1/2" v-if="state.currentTabIndex == 0" > Previous </button>
+            <button class="btn btn-outline w-1/2" v-if="state.currentTabIndex != 0" @click="previousTab"> Previous </button>
+
+            <button class="btn btn-disabled w-1/2" v-if="state.currentTabIndex == Object.values(CurrentTab).length - 1" > Next </button>
+            <button class="btn btn-outline w-1/2" v-if="state.currentTabIndex != Object.values(CurrentTab).length - 1" @click="nextTab"> Next </button>  
+        </div>
+
     </div>
+
   
   </template>
   
@@ -36,6 +49,30 @@
     
     const state = useStore()
     const router = useRouter()
+
+    const nextTab = () => {
+        state.currentTabIndex += 1
+
+        // Get keys of ENUM
+        const keys = Object.values(CurrentTab)
+        state.currentTab = keys[state.currentTabIndex]
+
+        if (process.client) {
+            window.scrollTo(0,0)
+        }
+    }
+
+    const previousTab = () => {
+        state.currentTabIndex -= 1
+
+        // Get keys of ENUM
+        const keys = Object.values(CurrentTab)
+        state.currentTab = keys[state.currentTabIndex]
+
+        if (process.client) {
+            window.scrollTo(0,0)
+        }
+    }
 
     definePageMeta({
         layout: "generate-workout-layout",

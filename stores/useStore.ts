@@ -4,6 +4,7 @@ import { InjuryOptions, EquipmentOptions, MuscleGroups, QueryParams } from '~/mo
 
 export const useStore = defineStore('store', () => {
     const currentTab = ref<CurrentTab>(CurrentTab.FITNESS_LEVEL)
+    const currentTabIndex = ref(0)
 
     const isLoading = false
     const generatedWorkout = ref<string | undefined>("")
@@ -177,5 +178,5 @@ export const useStore = defineStore('store', () => {
     },
     ])
 
-    return { currentTab, injuryOptions, equipmentOptions, muscleGroupOptions, queryParams, isLoading, generatedWorkout }
+    return { currentTab, currentTabIndex, injuryOptions, equipmentOptions, muscleGroupOptions, queryParams, isLoading, generatedWorkout }
   })
