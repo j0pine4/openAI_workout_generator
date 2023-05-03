@@ -123,6 +123,13 @@
             image_url: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1085&q=80',
             chatGptQuery: 'train for a marathon'
         },
+        {
+            id: 6,
+            title: 'Get more active',
+            description: `Get up and get moving!`,
+            image_url: 'https://images.unsplash.com/photo-1500468756762-a401b6f17b46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80',
+            chatGptQuery: 'find clever ways to become more active'
+        },
     ])
 
     // Functions

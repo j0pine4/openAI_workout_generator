@@ -62,6 +62,12 @@ export const useStore = defineStore('store', () => {
           image_url: 'https://images.unsplash.com/photo-1602005106541-b79126495de7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
           active: false
       },
+      { 
+          id: 8, 
+          name: 'Ankles',
+          image_url: 'https://images.unsplash.com/photo-1616531758364-731625b1f273?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+          active: false
+      },
   ])
 
   const muscleGroupOptions = ref<MuscleGroups[]>([
@@ -154,26 +160,44 @@ export const useStore = defineStore('store', () => {
     },
     { 
         id: 4, 
+        name: 'Straight Bar',
+        image_url: 'https://images.unsplash.com/photo-1678875524808-78e1d24b6597?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80',
+        active: false
+    },
+    { 
+        id: 5, 
         name: 'Kettle Bells',
         image_url: 'https://images.unsplash.com/photo-1570440828762-ab7a993dbde8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80',
         active: false
     },
     { 
-        id: 5, 
+        id: 6, 
         name: 'Pullup Bar',
         image_url: 'https://images.unsplash.com/photo-1663614536871-3845f6890aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
         active: false
     },
     { 
-        id: 6, 
+        id: 7, 
         name: 'Dip Station',
         image_url: 'https://images.unsplash.com/photo-1616804167821-55eb1fab5b5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         active: false
     },
     { 
-        id: 7, 
+        id: 8, 
         name: 'Battle Ropes',
         image_url: 'https://images.unsplash.com/photo-1514994444123-10094655bdb5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+        active: false
+    },
+    { 
+        id: 9, 
+        name: 'Treadmill',
+        image_url: 'https://images.unsplash.com/photo-1633394782240-f81aba3f850d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        active: false
+    },
+    { 
+        id: 10, 
+        name: 'Stationary Bike',
+        image_url: 'https://images.unsplash.com/photo-1499438075715-fc23ef376ab9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80',
         active: false
     },
     ])
